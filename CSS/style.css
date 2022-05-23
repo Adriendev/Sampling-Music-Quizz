@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(251, 241, 226);
+}
+
+#intro {
+  background-image: url(Images/sound-wave.png),
+    linear-gradient(to right top, #4a057b, #950072, #ca005d, #eb3241, #f96f1d);
+  width: 100vw;
+  height: 250px;
+}
+
+#no-intro {
+  display: none;
+}
+
+#intro h1 {
+  text-align: center;
+  color: white;
+  padding: 3rem;
+}
+
+#declare {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#start-game {
+}
+
+.vinyl {
+  width: 10rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: -4.5rem;
+}
+
+#level {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+#launch {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  margin: 1rem;
+}
+
+#game-time {
+}
+
+#game-none {
+  display: none;
+}
