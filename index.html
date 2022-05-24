@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
+    <img src="Images/soundWaveV2.png" alt="sound wave background" class="wave">
     <section id="intro">
       <h1>Sampling Music Quizz</h1>
       <div id="declare">
@@ -22,25 +23,53 @@
         <button id="medium" class="btn medium">Medium</button>
         <button id="hard" class="btn hard">Hard</button>
       </div>
-      <button id="launch" class="btn start">Start the game!</button>
     </section>
-    <section id="game-none">
+    <section id="noGame">
+      <h2>Who sampled this music?</h2>
+      <button id="nextMusic" class="btn no-display">Next</button>
+      <div id="music">
+        <iframe
+        id="musicSampled"
+          src="https://www.youtube.com/embed/fiD39jo5Yo4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+
+        </iframe>
+        <img src="Images/ARROW.png" alt="arrow" class="arrow" />
+        <iframe
+        id="musicToFind"
+        src="https://www.youtube.com/embed/fiD39jo5Yo4"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+      </div>
+      <div class="points"></div>
       <button id="square" class="btn square">Square</button>
-      <div id="squareAnswers">
-        <div id="firstRow">
-          <button id="squareA1" class="btn square answer"></button>
-          <button id="squareA2" class="btn square answer"></button>
+      <button id="duo" class="btn duo">Duo</button>
+      <div id="noSquareAnswers">
+        <div>
+          <button id="squareA1" class="btn square a one">First choice</button>
+          <button id="squareA2" class="btn square a two">Second choice</button>
         </div>
-        <div id="secondRow">
-          <button id="squareA3" class="btn square answer"></button>
-          <button id="squareA4" class="btn square answer"></button>
+        <div>
+          <button id="squareA3" class="btn square a three">Third choice</button>
+          <button id="squareA4" class="btn square a four">Fourth choice</button>
         </div>
       </div>
-      <button id="duo" class="btn duo">Duo</button>
-      <div id="duoAnswers">
-        <button id="duoA1" class="btn duo answer"></button>
-        <button id="duoA2" class="btn duo answer"></button>
+
+      <div id="noDuoAnswers">
+        <button id="duoA1" class="btn duo d one">First choice</button>
+        <button id="duoA2" class="btn duo d two">Second choice</button>
       </div>
     </section>
+    <button id="launch" class="btn start">Start the game!</button>
+    <script src="/JS/data.js"></script>
+    <script src="/JS/databis.js"></script>
+    <script src="/JS/game.js"></script>
+    <script src="/JS/index.js"></script>
   </body>
 </html>

@@ -6,11 +6,26 @@
 
 body {
   background-color: rgb(251, 241, 226);
+  /* background-image: url(/Images/soundWaveV2.png); */
+}
+
+.wave {
+  position: absolute;
+  width: 80vw;
+  z-index: -1;
+  top: 55%;
+  left: 12%;
 }
 
 #intro {
-  background-image: url(Images/sound-wave.png),
-    linear-gradient(to right top, #4a057b, #950072, #ca005d, #eb3241, #f96f1d);
+  background-image: linear-gradient(
+    to right top,
+    #4a057b,
+    #950072,
+    #ca005d,
+    #eb3241,
+    #f96f1d
+  );
   width: 100vw;
   height: 250px;
 }
@@ -33,6 +48,8 @@ body {
 }
 
 #start-game {
+
+
 }
 
 .vinyl {
@@ -49,6 +66,10 @@ body {
   align-items: center;
   padding: 3rem;
 }
+#no-level {
+  display: none;
+}
+
 #launch {
   display: block;
   margin: 0 auto;
@@ -61,6 +82,72 @@ body {
 #game-time {
 }
 
-#game-none {
+#noGame {
   display: none;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game h2 {
+  text-align: center;
+  color: red;
+  padding: 3rem;
+}
+
+#music {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrow {
+  width: 25%;
+  height: 25%;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  
+}
+
+
+.restart {
+}
+
+#noSquareAnswers {
+  display: none;
+}
+
+#squareAnswers {
+}
+
+#noDuoAnswers {
+  display: none;
+}
+#duoAnswers {
+}
+
+.no-display {
+  display: none;
+}
+
+.next {
+
+}
+
+.points {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.good {
+  background-color:green;
+}
+.bad {
+  background-color: red;
 }

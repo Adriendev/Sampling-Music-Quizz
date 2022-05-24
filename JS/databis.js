@@ -1,18 +1,50 @@
 const musicsSampleOf = [
-    {
-      artiste: "Daft Punk",
-      title: "Harder, Better, Faster, Stronger",
-      genre: "Electronic / Dance",
-      url: "https://www.youtube.com/watch?v=gAjR4_CbPpQ&t=2s&ab_channel=DaftPunk",
-      sample: "sample appears at 0:05 and 0:20 (and throughout)",
-      hasBeenPlayed: false
-    },
-    {
-        artiste:"Shakira",
-        title: "Waka Waka (This Time for Africa)",
-        genre: "Rock / Pop",
-        url: "https://www.youtube.com/watch?v=pRpeEdMmmQ0&feature=emb_title&ab_channel=shakiraVEVO",
-        sample: "sample appears at 0:59 (and throughout)",
-        hasBeenPlayed: false
-    }
-  ];
+  {
+    song: "Daft Punk - Harder, Better, Faster, Stronger",
+    title: "Harder, Better, Faster, Stronger",
+    genre: "Electronic / Dance",
+    url: "https://www.youtube.com/embed/gAjR4_CbPpQ",
+    sample: "sample appears at 0:05 and 0:20 (and throughout)",
+    hasBeenPlayed: false,
+  },
+  {
+    song: "Shakira - Waka Waka (This Time for Africa)",
+    title: "Waka Waka (This Time for Africa)",
+    genre: "Rock / Pop",
+    url: "https://www.youtube.com/embed/pRpeEdMmmQ0",
+    sample: "sample appears at 0:59 (and throughout)",
+    hasBeenPlayed: false,
+  },
+  {
+    song: "Dr Dre feat Eminem and Xzibit - What's the difference",
+    title: "What's the difference",
+    genre: "Hip-Hop / Rap / R&B",
+    url: "https://www.youtube.com/embed/PANEcjhSfv4",
+    sample: "sample appears at 0:00 ",
+    hasBeenPlayed: false,
+  },
+  {
+    song: "Stardust - Music Sounds Better With You",
+    title: "Music Sounds Better With You",
+    genre: "Electronic / Dance",
+    url: "https://www.youtube.com/embed/FQlAEiCb8m0",
+    sample: "sample appears at 0:00 (and throughout)",
+    hasBeenPlayed: false,
+  },
+  {
+    song: "M.I.A. - Paper Planes",
+    title: "Paper Planes",
+    genre: "Hip-Hop / Rap / R&B",
+    url: "https://www.youtube.com/embed/ewRjZoRtu0Y",
+    sample: "sample appears at 0:00 (and throughout)",
+    hasBeenPlayed: false,
+  },
+  {
+    song: "Will Smith feat Coko - Men in Black",
+    title: "Men in Black",
+    genre: "Hip-Hop / Rap / R&B",
+    url: "https://www.youtube.com/embed/fiBLgEx6svA",
+    sample: "sample appears at 0:13 (and throughout)",
+    hasBeenPlayed: false,
+  },
+];
