@@ -18,6 +18,10 @@ let duos = document.querySelectorAll(".duo.d");
 let points = document.querySelector(".points");
 points.textContent = 0;
 
+// Question mark's class
+let question = document.querySelector(".question-mark");
+console.log(question);
+
 // Next's button class
 let next = document.querySelector(".no-display");
 
@@ -51,8 +55,6 @@ function randomSquareAnswer() {
   let test = [];
   const answer = musicsShuffle.findIndex((element) => {
     if (element.url === musicToFind.src) {
-      console.log(`element${element.url}`);
-      console.log(musicToFind.src);
       return true;
     }
   });
@@ -78,34 +80,33 @@ function randomSquareAnswer() {
   //   );
 }
 
-
 // Pick random duo answers
 function randomDuoAnswers() {
   //   const [musicSampled, musicToFind] = randomMusicSampled();
   const duoAnswers = [duoOne, duoTwo];
   let duoShuffle = duoAnswers.sort((a, b) => 0.5 - Math.random());
-  console.log(duoShuffle);
   const copy = [...musicsSampleOf];
   let musicsDuoShuffle = copy.sort((a, b) => 0.5 - Math.random());
   let test = [];
-  for (let i = 0; i < musicsDuoShuffle.length; i++) {
-    if (musicsDuoShuffle[i].url === musicToFind.url) {
-      duoShuffle[0].textContent = musicsDuoShuffle[i].song;
-      test.push(i);
-      console.log(duoShuffle[0]);
+  const answer = musicsDuoShuffle.findIndex((element) => {
+    if (element.url === musicToFind.src) {
+      return true;
     }
-  }
+  });
+  test = [answer];
+  duoShuffle[0].textContent = musicsDuoShuffle[answer].song;
+
   while (test.length < 2) {
     const index = Math.floor(Math.random() * musicsDuoShuffle.length);
     if (!test.includes(index)) {
       test.push(index);
     }
   }
-  for (let i = 0; i < test.length; i++) {
-    duoShuffle[i].textContent = musicsDuoShuffle[i].song;
+  for (let i = 1; i < test.length; i++) {
+    duoShuffle[i].textContent = musicsDuoShuffle[test[i]].song;
   }
 
-  return duoShuffle[0] + duoShuffle[1];
+  //   return duoShuffle[0] + duoShuffle[1];
 }
 
 // Add points to Scoreboard
@@ -123,12 +124,14 @@ function checkIfGood(button) {
 squares.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (checkIfGood(event.target)) {
+      question.classList.replace("question", "no-question");
       addPoints(3);
       click = true;
       next.classList.replace("no-display", "next");
     } else {
       click = true;
       next.classList.replace("no-display", "next");
+      question.classList.replace("question", "no-question");
     }
   });
 });
@@ -139,9 +142,11 @@ duos.forEach((button) => {
       addPoints(1);
       click = true;
       next.classList.replace("no-display", "next");
+      question.classList.replace("question-mark", "no-question");
     } else {
       click = true;
       next.classList.replace("no-display", "next");
+      question.classList.replace("question-mark", "no-question");
     }
   });
 });
@@ -150,9 +155,16 @@ duos.forEach((button) => {
 next.addEventListener("click", () => {
   if (next.classList.contains("next")) {
     click = false;
+    next.classList.replace("no-display", "next");
+    squareChoices.id = "noSquareAnswers";
+    squareButton.classList.replace("no-display", "square");
+    duoButton.classList.replace("no-display", "duo");
+    squareButton.classList.replace("no-display", "square");
+    duoButton.classList.replace("no-display", "duo");
+    duoChoices.id = "noDuoAnswers";
+    question.classList.replace("no-display", "question-mark");
     randomMusicSampled();
     randomSquareAnswer();
     randomDuoAnswers();
-    next.classList.replace("no-display", "next");
   }
 });

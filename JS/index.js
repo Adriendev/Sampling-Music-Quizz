@@ -28,7 +28,7 @@ launchButton.addEventListener("click", () => {
     choiceGame.id = "game";
     randomMusicSampled();
     randomSquareAnswer()
-    // randomDuoAnswers()
+    randomDuoAnswers()
   } else if (launchButton.classList.contains("restart")) {
     launchButton.textContent = "Start the game!";
     launchButton.classList.replace("restart", "start");

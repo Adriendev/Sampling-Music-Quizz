@@ -151,3 +151,13 @@ body {
 .bad {
   background-color: red;
 }
+
+.question-mark{
+  position: absolute;
+    width: 25%;
+    right: 17%;
+}
+
+.no-question {
+  display: none;
+}
