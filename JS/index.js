@@ -1,10 +1,10 @@
 // All buttons elements by ID
 const launchButton = document.getElementById("launch");
-const rulesButton = document.getElementById("rules");
-const whatButton = document.getElementById("what");
-const easyButton = document.getElementById("easy");
-const mediumButton = document.getElementById("medium");
-const hardButton = document.getElementById("hard");
+// const rulesButton = document.getElementById("rules");
+// const whatButton = document.getElementById("what");
+// const easyButton = document.getElementById("easy");
+// const mediumButton = document.getElementById("medium");
+// const hardButton = document.getElementById("hard");
 const squareButton = document.getElementById("square");
 const duoButton = document.getElementById("duo");
 
@@ -16,8 +16,36 @@ const vinyl = document.querySelector(".vinyl");
 const choiceGame = document.getElementById("noGame");
 const squareChoices = document.getElementById("noSquareAnswers");
 const duoChoices = document.getElementById("noDuoAnswers");
+const answersSection = document.querySelector(".no-answers");
 
-// Launching & restart the game 
+// Timer
+const three = document.querySelector(".timer.three");
+const two = document.querySelector(".timer.two");
+const one = document.querySelector(".timer.one");
+const timerDiv = document.querySelector(".no-time");
+
+// function timer() {
+//   timerDiv.classList.replace("no-time", "timeout");
+  
+//   setTimeout(() => {
+//     timerDiv.classList.replace("tiemout", "timeout");
+//   }, 25000 )
+
+//   setTimeout(() => {
+//     displayMessage(one);
+//   }, 20000);
+
+//   setTimeout(() => {
+//     displayMessage(two);
+//   }, 10000);
+
+//   setTimeout(() => {
+//     displayMessage(three);
+//   }, 1000);
+
+// }
+
+// Launching & restart the game
 launchButton.addEventListener("click", () => {
   if (launchButton.classList.contains("start")) {
     launchButton.textContent = "Restart?";
@@ -26,9 +54,11 @@ launchButton.addEventListener("click", () => {
     vinyl.classList.replace("vinyl", "no-display");
     level.id = "no-level";
     choiceGame.id = "game";
+    answersSection.classList.replace("no-answers", "answers");
+    reset();
     randomMusicSampled();
-    randomSquareAnswer()
-    randomDuoAnswers()
+    randomSquareAnswer();
+    randomDuoAnswers();
   } else if (launchButton.classList.contains("restart")) {
     launchButton.textContent = "Start the game!";
     launchButton.classList.replace("restart", "start");
@@ -38,10 +68,12 @@ launchButton.addEventListener("click", () => {
     choiceGame.id = "noGame";
     squareChoices.id = "noSquareAnswers";
     duoChoices.id = "noDuoAnswers";
-    squareButton.classList.replace("no-display", "square" );
+    squareButton.classList.replace("no-display", "square");
     duoButton.classList.replace("no-display", "duo");
     click = false;
     points.textContent = 0;
+    next.classList.replace("next","no-display");
+    answersSection.classList.replace("answers", "no-answers");
   }
 });
 
@@ -59,12 +91,10 @@ duoButton.addEventListener("click", () => {
   if (duoButton.classList.contains("duo")) {
     squareButton.classList.replace("square", "no-display");
     duoButton.classList.replace("duo", "no-display");
-    duoChoices.id = 'duoAnswers'
+    duoChoices.id = "duoAnswers";
   }
 });
-  
-  // Pick random answers
-  
-  // Add points to Scoreboard
-  
-  
+
+// Pick random answers
+
+// Add points to Scoreboard

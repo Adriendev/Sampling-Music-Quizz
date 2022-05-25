@@ -4,51 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sampling Music Quizz</title>
+    <title>Sampling Music Blind Test</title>
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <img src="Images/soundWaveV2.png" alt="sound wave background" class="wave">
+    <img
+      src="Images/soundWaveV2.png"
+      alt="sound wave background"
+      class="wave"
+    />
+    <!-- <div class="no-time">
+      <p class="timer one">3</p>
+      <p class="timer two">2</p>
+      <p class="timer three">1</p>
+    </div> -->
     <section id="intro">
-      <h1>Sampling Music Quizz</h1>
-      <!-- <h3>Can you recognize this famous songs</h3> -->
-      <div id="declare">
-        <button id="what" class="btn pop">Sampling? What's that?</button>
-        <button id="rules" class="btn pop">Rules of the game!</button>
-      </div>
+      <h1>Sampling Music Blind Test</h1>
+      <hr />
+      <h3>Can you recognize these famous songs</h3>
+      <div id="declare"></div>
     </section>
     <section id="start-game">
       <img src="Images/Vinyl-Records.png" alt="turning vinyle" class="vinyl" />
-      <div id="level">
-        <button id="easy" class="btn easy">Easy</button>
-        <button id="medium" class="btn medium">Medium</button>
-        <button id="hard" class="btn hard">Hard</button>
+      <!-- <h3 class="presentation">
+        Your goal is simple, finding which modern song re-appropriate and
+        sampled this "old gem" that you're listening to. Pretty simple right?
+      </h3> -->
+      <article id="level">
+        <div class="sampling">
+          <h3>Sampling what's that?</h3>
+          <p>
+            In music, sampling is the act of taking a portion, or sample, of one
+            sound recording and reusing it as an instrument or element of a new
+            recording. This is typically done with a sampler, which can be a
+            piece of hardware or a computer program on a digital computer.
+          </p>
+
+          <p>
+            <strong
+              >Sampling is an artform that has spawned many musical genres and
+              underlies a flurry of endless musical creativity.</strong
+            >
+          </p>
+          <p>
+            Some would think that sampling started with the Hip-Hop tracks of
+            the early 80’s, but in its broader sense it goes way back, further
+            than even the Beatles borrowing a piece of French national anthem La
+            Marseillaise for “All You Need is Love” in 1967.
+          </p>
+        </div>
+        <div class="rules">
+          <h3>Rules of the game</h3>
+          <p>  Your goal is simple, find which modern song re-appropriate and
+            sampled this "old gem" that you're listening to. Pretty simple right? Now let's focus on the rules of the game:</p>
+          <ul>
+            <li>
+              -> First, listen to the song display on your browser. If you
+              recognize something it's normal ;)
+            </li>
+            <li>
+              -> If you feel confident, play for <strong>3 points</strong>  by clicking on
+              <strong>"Carré"</strong> and picking the correct answer between
+              the four propositions.
+            </li>
+            <li>
+              -> If you don't, play for <strong>1 point</strong>  by clicking on
+              <strong>"Duo"</strong> and picking the correct answer between two
+              propositions.
+            </li>
+            <li>-> You will have to find <strong>10 songs</strong> for a maximum of 30 points!</li>
+          </ul>
+          <p><strong>Good luck & have fun listening to music!</strong> </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="noGame">
+    <div class="lead">
+      <div class="points"></div>
+      <h2>Who sampled this music?</h2>
+      <button id="nextMusic" class="btn no-display">Next</button>
+    </div>
+      <div id="music">
+        <article class="sampled">
+          <iframe
+            id="musicSampled"
+            src="https://www.youtube.com/embed/fiD39jo5Yo4"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+          <h3 class="title">Titre de la chanson</h3>
+          <p class="sample-appears">sample appears</p>
+        </article>
+        <article>
+          <img src="Images/ARROW.png" alt="arrow" class="arrow" />
+        </article>
+        <article class="find">
+          <img
+            src="/Images/questionmark.png"
+            alt="question mark backgournd"
+            class="question"
+          />
+          <article class="hidden">
+            <iframe
+              id="musicToFind"
+              src="https://www.youtube.com/embed/fiD39jo5Yo4"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+            <h3 class="title-find"></h3>
+            <p class="sample-appears-find"></p>
+          </article>
+        </div>
       </div>
     </section>
-    <section id="noGame">
-      <h2>Who sampled this music?</h2>
-      <!-- <img src="/Images/Question-Mark-Background.jpg" alt="question mark backgournd" class="question-mark"> -->
-      <button id="nextMusic" class="btn no-display">Next</button>
-      <div id="music">
-        <iframe
-        id="musicSampled"
-          src="https://www.youtube.com/embed/fiD39jo5Yo4"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-        <img src="Images/ARROW.png" alt="arrow" class="arrow" />
-        <iframe
-        id="musicToFind"
-        src="https://www.youtube.com/embed/fiD39jo5Yo4"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
-      </div>
-      <div class="points"></div>
+    <section class="no-answers">
       <button id="square" class="btn square">Square</button>
       <button id="duo" class="btn duo">Duo</button>
       <div id="noSquareAnswers">
