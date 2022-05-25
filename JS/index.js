@@ -55,6 +55,8 @@ launchButton.addEventListener("click", () => {
     level.id = "no-level";
     choiceGame.id = "game";
     answersSection.classList.replace("no-answers", "answers");
+    question.classList.replace("no-display", "question");
+    reveal.classList.replace("reveal", "hidden")
     reset();
     randomMusicSampled();
     randomSquareAnswer();

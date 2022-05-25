@@ -134,7 +134,27 @@ function randomDuoAnswers() {
 // Add points to Scoreboard
 
 function addPoints(n) {
-  return (points.textContent = +points.textContent + n);
+
+if (n < 8){
+  points.textContent = +points.textContent + n;
+};
+if (n > 8 && n < 15){
+  points.textContent = +points.textContent + n;
+  points.classList.replace("points","points-v2")
+};
+if (n > 15 && n < 21){
+  points.textContent = +points.textContent + n;
+  points.classList.replace("points-v2","points-v3")
+};
+if (n > 21 && n < 28){
+  points.textContent = +points.textContent + n;
+  points.classList.replace("points-v3","points-v4")
+};
+if (n > 28 && n < 30){
+  points.textContent = +points.textContent + n;
+  points.classList.replace("points-v4","points-v5")
+};
+return
 }
 
 // Control good/bad answer
@@ -180,6 +200,7 @@ duos.forEach((button) => {
 });
 
 // Next song & end  game
+let count = document.querySelector(".counter")
 let counter = 0;
 next.addEventListener("click", () => {
   if (next.classList.contains("next") && counter <= 10) {
@@ -194,6 +215,7 @@ next.addEventListener("click", () => {
     duoButton.classList.replace("no-display", "duo");
     duoChoices.id = "noDuoAnswers";
     counter++;
+    count.textContent = `${counter}/10`;
     randomMusicSampled();
     randomSquareAnswer();
     randomDuoAnswers();

@@ -59,20 +59,20 @@
             sampled this "old gem" that you're listening to. Pretty simple right? Now let's focus on the rules of the game:</p>
           <ul>
             <li>
-              -> First, listen to the song display on your browser. If you
+              <strong>-></strong> First, listen to the song display on your browser. If you
               recognize something it's normal ;)
             </li>
             <li>
-              -> If you feel confident, play for <strong>3 points</strong>  by clicking on
+              <strong>-></strong> If you feel confident, play for <strong>3 points</strong>  by clicking on
               <strong>"Carré"</strong> and picking the correct answer between
               the four propositions.
             </li>
             <li>
-              -> If you don't, play for <strong>1 point</strong>  by clicking on
+              <strong>-></strong> If you don't, play for <strong>1 point</strong>  by clicking on
               <strong>"Duo"</strong> and picking the correct answer between two
               propositions.
             </li>
-            <li>-> You will have to find <strong>10 songs</strong> for a maximum of 30 points!</li>
+            <li><strong>-></strong> You will have to find <strong>10 songs</strong> for a maximum of 30 points!</li>
           </ul>
           <p><strong>Good luck & have fun listening to music!</strong> </p>
         </div>
@@ -80,11 +80,11 @@
     </section>
 
     <section id="noGame">
-    <div class="lead">
+    <section class="lead">
       <div class="points"></div>
-      <h2>Who sampled this music?</h2>
-      <button id="nextMusic" class="btn no-display">Next</button>
-    </div>
+      <div class="counter">1/10</div>
+    </section>
+    <h2>Who sampled this music?</h2>
       <div id="music">
         <article class="sampled">
           <iframe
@@ -98,8 +98,9 @@
           <h3 class="title">Titre de la chanson</h3>
           <p class="sample-appears">sample appears</p>
         </article>
-        <article>
+        <article class="center">
           <img src="Images/ARROW.png" alt="arrow" class="arrow" />
+          <button id="nextMusic" class="btn no-display">Next</button>
         </article>
         <article class="find">
           <img
@@ -126,11 +127,11 @@
       <button id="square" class="btn square">Square</button>
       <button id="duo" class="btn duo">Duo</button>
       <div id="noSquareAnswers">
-        <div>
-          <button id="squareA1" class="btn square a one">First choice</button>
+        <div class="row-one">
+          <button id="squareA1" class="btn square a one">First choice</button> 
           <button id="squareA2" class="btn square a two">Second choice</button>
         </div>
-        <div>
+        <div class="row-two">
           <button id="squareA3" class="btn square a three">Third choice</button>
           <button id="squareA4" class="btn square a four">Fourth choice</button>
         </div>
