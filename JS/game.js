@@ -57,11 +57,6 @@ function randomMusicSampled() {
       musicsSampledIn[i].hasBeenPlayed = true;
     }
   }
-  console.log(randomSampled);
-  console.log(
-    musicsSampledIn.filter((element) => element.hasBeenPlayed === false)
-  );
-
   // music to find
   for (let j = 0; j < musicsSampleOf.length; j++) {
     if (
@@ -73,10 +68,6 @@ function randomMusicSampled() {
       console.log(musicsSampleOf[j]);
     }
   }
-  console.log(randomSampled);
-  console.log(randomToFind);
-  console.log(musicsSampledIn);
-  console.log(musicsSampleOf);
 
   musicSampled.src = randomSampled.url;
   musicToFind.title = randomToFind[0].song;
