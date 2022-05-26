@@ -168,7 +168,7 @@ function addPoints(n) {
   if (points.textContent > 21 && points.textContent < 28) {
     points.classList.replace("points-v3", "points-v4");
   }
-  if (points.textContent > 28 && points.textContent < 30) {
+  if (points.textContent > 28 && points.textContent <= 30) {
     points.classList.replace("points-v4", "points-v5");
   }
   return;
@@ -243,6 +243,8 @@ next.addEventListener("click", () => {
     count.textContent = `${counter}/10`;
     squares.forEach((element) => element.classList.remove("good"));
     squares.forEach((element) => element.classList.remove("bad"));
+    duos.forEach((element) => element.classList.remove("good"));
+    duos.forEach((element) => element.classList.remove("bad"));
     randomMusicSampled();
     randomSquareAnswer();
     randomDuoAnswers();

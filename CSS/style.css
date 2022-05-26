@@ -286,86 +286,125 @@ li {
 .lead {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .points {
-/* 0 to 7 */
-  background-color: #4a057b;
-  border-color: #4a057b;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.3rem; 
-  padding-bottom: 0.2rem;
-  margin-left: 2rem;
+  /* 0 to 7 */
+  position: absolute;
+  left: 5%;
+  background-color: #ca0032;
+  border-color: #ca0032;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-weight: 700;
-  color: white; 
+  color: white;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 3px 2px 3px black;
 }
 
 .points-v2 {
   /* 8 to 14 */
-  background-color: #950072;
-  border-color: #950072;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.3rem; 
-  padding-bottom: 0.2rem;
-  margin-left: 2rem;
+  position: absolute;
+  left: 5%;
+  background-color: #f96f1d;
+  border-color: #f96f1d;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-weight: 700;
-  color: white; 
+  color: white;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 3px 2px 3px black;
 }
 
 .points-v3 {
   /* 15 to 21 */
-  background-color: #ca005d;
-  border-color: #ca005d;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.3rem; 
-  padding-bottom: 0.2rem;
-  margin-left: 2rem;
+  position: absolute;
+  left: 5%;
+  background-color: #f1c253;
+  border-color: #f1c253;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-weight: 700;
-  color: white; 
+  color: white;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 3px 2px 3px black;
 }
 
 .points-v4 {
   /* 21 to 28 */
-  background-color:#f96f1d;
-  border-color: #f96f1d;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.3rem; 
-  padding-bottom: 0.2rem;
-  margin-left: 2rem;
+  position: absolute;
+  left: 5%;
+  background-color: #1eff00;
+  border-color: #1eff00;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-weight: 700;
-  color: white; 
+  color: white;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 3px 2px 3px black;
 }
 .points-v5 {
   /* 28 to 30 */
-  background-color:#36fd1d;
-  border-color: #36fd1d;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.3rem; 
-  padding-bottom: 0.2rem;
-  margin-left: 2rem;
+  position: absolute;
+  left: 5%;
+  background-image: linear-gradient(
+    to right top,
+    #4a057b,
+    #950072,
+    #ca005d,
+    #eb3241,
+    #f96f1d
+  );
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-weight: 700;
-  color: white; 
+  color: white;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 3px 2px 3px black;
 }
-
-
 
 .counter {
   background-color: #f96f1d;
   border-color: #f96f1d;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-  padding-top: 0.3rem; 
+  padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   font-weight: 700;
-  color: white; 
+  color: white;
   margin-right: 2rem;
-
+  box-shadow: 3px 2px 3px #4a057b;
 }
 
 #music {
@@ -504,8 +543,8 @@ li {
   );
   border: 0;
   border-radius: 0px;
-  box-shadow: rgba(5, 88, 2, 0.4) 0 2px 4px,
-    rgba(5, 88, 2, 0.3) 0 7px 13px -3px, rgba(5, 88, 2, 0.5) 0 -3px 0 inset;
+  box-shadow: rgba(5, 88, 2, 0.4) 0 2px 4px, rgba(5, 88, 2, 0.3) 0 7px 13px -3px,
+    rgba(5, 88, 2, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -532,12 +571,12 @@ li {
 
 .good:focus {
   box-shadow: rgb(5, 88, 2) 0 0 0 1px inset, rgb(5, 251, 67) 0 2px 4px,
-  #02c44f 0 7px 13px -3px, #afefa7 0 -3px 0 inset;
+    #02c44f 0 7px 13px -3px, #afefa7 0 -3px 0 inset;
 }
 
 .good:hover {
-  box-shadow: rgba(2, 196,79, 0.4) 0 4px 8px,
-    rgba(2, 196,79, 0.3) 0 7px 13px -3px, #02c44f 0 -3px 0 inset;
+  box-shadow: rgba(2, 196, 79, 0.4) 0 4px 8px,
+    rgba(2, 196, 79, 0.3) 0 7px 13px -3px, #02c44f 0 -3px 0 inset;
   transform: translateY(-2px);
   background-image: radial-gradient(
     100% 100% at 100% 0,
@@ -549,15 +588,11 @@ li {
 .bad {
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(
-    100% 100% at 100% 0,
-    #e61d1d 0,
-    black 100%
-  );
+  background-image: radial-gradient(100% 100% at 100% 0, #e61d1d 0, black 100%);
   border: 0;
   border-radius: 0px;
-  box-shadow: rgba(77, 2, 2, 0.4) 0 2px 4px,
-    rgba(77, 2, 2, 0.3) 0 7px 13px -3px, rgba(137, 7, 7, 0.5) 0 -3px 0 inset;
+  box-shadow: rgba(77, 2, 2, 0.4) 0 2px 4px, rgba(77, 2, 2, 0.3) 0 7px 13px -3px,
+    rgba(137, 7, 7, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -584,19 +619,15 @@ li {
 }
 
 .bad:focus {
-  box-shadow: rgb(0, 0, 0) 0 0 0 1px inset, rgb(170, 7, 7,) 0 2px 4px,
-  #c40202 0 7px 13px -3px, #ea7d7d 0 -3px 0 inset;
+  box-shadow: rgb(0, 0, 0) 0 0 0 1px inset, rgb(170, 7, 7) 0 2px 4px,
+    #c40202 0 7px 13px -3px, #ea7d7d 0 -3px 0 inset;
 }
 
 .bad:hover {
-  box-shadow: rgba(230, 7,7, 0.4) 0 4px 8px,
-  rgba(250, 7, 7, 0.3) 0 7px 13px -3px, #c40202 0 -3px 0 inset;
-transform: translateY(-2px);
-background-image: radial-gradient(
-  100% 100% at 100% 0,
-  black 0,
-  #e61d1d 100%
-);
+  box-shadow: rgba(230, 7, 7, 0.4) 0 4px 8px,
+    rgba(250, 7, 7, 0.3) 0 7px 13px -3px, #c40202 0 -3px 0 inset;
+  transform: translateY(-2px);
+  background-image: radial-gradient(100% 100% at 100% 0, black 0, #e61d1d 100%);
 }
 
 .no-answers {
@@ -663,10 +694,10 @@ background-image: radial-gradient(
 }
 
 .victory h2 {
-text-align: center;
-color: white;
-font-weight: 900;
-margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 1rem;
 }
 
 .victory hr {
@@ -703,15 +734,14 @@ margin-bottom: 1rem;
   animation: roll 3s linear infinite;
   transform: rotate(30deg);
   bottom: -3rem;
-  left: calc(50% - 3rem) ;
+  left: calc(50% - 3rem);
   /* padding-bottom: 2rem; */
 }
 
 .pointsboard {
-margin-left: 2rem;
-margin-right: 1rem;
-font-size: 3rem;
-text-shadow: 1px 1px black;
-margin-top: -1.5rem;
-
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 3rem;
+  text-shadow: 1px 1px black;
+  margin-top: -1.5rem;
 }

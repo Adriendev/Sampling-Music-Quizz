@@ -78,6 +78,7 @@ launchButton.addEventListener("click", () => {
     points.textContent = 0;
     next.classList.replace("next","no-display");
     answersSection.classList.replace("answers", "no-answers");
+    congratz.classList.replace("victory", "no-display");
   }
 });
 
