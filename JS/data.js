@@ -94,14 +94,6 @@ const musicsSampledIn = [
     sampleIn: "Toxic",
   },
   {
-    song: "Charles Aznavour - Parce Que Tu Crois",
-    title: "Parce Que Tu Crois",
-    url: "https://www.youtube.com/embed/28nMw4zmdKE",
-    sample: "sample appears at 0:00",
-    hasBeenPlayed: false,
-    sampleIn: "What's the difference",
-  },
-  {
     song: "Mike Brant - Mais Dans La Lumière",
     title: "Mais Dans La Lumière",
     url: "https://www.youtube.com/embed/GvN-ZTJG2L0",

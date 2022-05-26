@@ -83,13 +83,6 @@ const musicsSampleOf = [
     hasBeenPlayed: false,
   },
   {
-    song: "Dr Dre feat Eminem and Xzibit - What's the difference",
-    title: "What's the difference",
-    url: "https://www.youtube.com/embed/PANEcjhSfv4",
-    sample: "sample appears at 0:00",
-    hasBeenPlayed: false,
-  },
-  {
     song: "Eminem, Dr Dre and 50 Cent - Crack a Bottle",
     title: "Crack a Bottle",
     url: "https://www.youtube.com/embed/HiVZbFhVeck",

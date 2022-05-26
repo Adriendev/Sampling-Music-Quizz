@@ -31,13 +31,32 @@ let reveal = document.querySelector(".hidden");
 // Next's button class
 let next = document.querySelector(".no-display");
 
+// Congratz layout 
+let congratz = document.querySelector("section.no-display")
+
 // Pick random musics
 function randomMusicSampled() {
   let randomSampled = [];
   let randomToFind = [];
 
-  randomSampled =
-    musicsSampledIn[Math.floor(Math.random() * musicsSampledIn.length)];
+  // music display
+  let filtre = musicsSampledIn.filter(
+    (element) => element.hasBeenPlayed === false
+  );
+
+  randomSampled = filtre[Math.floor(Math.random() * filtre.length)];
+
+  for (let i = 0; i < musicsSampledIn.length; i++) {
+    if (musicsSampledIn[i] === randomSampled) {
+      musicsSampledIn[i].hasBeenPlayed = true;
+    }
+  }
+  console.log(randomSampled);
+  console.log(
+    musicsSampledIn.filter((element) => element.hasBeenPlayed === false)
+  );
+
+  // music to find
   for (let j = 0; j < musicsSampleOf.length; j++) {
     if (
       musicsSampleOf[j].title.includes(randomSampled.sampleIn) &&
@@ -63,8 +82,6 @@ function randomMusicSampled() {
 
   return [musicSampled, musicToFind];
 }
-
-// reset hasBeenPlayed
 
 function reset() {
   musicsSampleOf.forEach((element) => (element.hasBeenPlayed = false));
@@ -134,27 +151,20 @@ function randomDuoAnswers() {
 // Add points to Scoreboard
 
 function addPoints(n) {
-
-if (n < 8){
   points.textContent = +points.textContent + n;
-};
-if (n > 8 && n < 15){
-  points.textContent = +points.textContent + n;
-  points.classList.replace("points","points-v2")
-};
-if (n > 15 && n < 21){
-  points.textContent = +points.textContent + n;
-  points.classList.replace("points-v2","points-v3")
-};
-if (n > 21 && n < 28){
-  points.textContent = +points.textContent + n;
-  points.classList.replace("points-v3","points-v4")
-};
-if (n > 28 && n < 30){
-  points.textContent = +points.textContent + n;
-  points.classList.replace("points-v4","points-v5")
-};
-return
+  if (points.textContent > 8 && points.textContent < 15) {
+    points.classList.replace("points", "points-v2");
+  }
+  if (points.textContent > 15 && points.textContent < 21) {
+    points.classList.replace("points-v2", "points-v3");
+  }
+  if (points.textContent > 21 && points.textContent < 28) {
+    points.classList.replace("points-v3", "points-v4");
+  }
+  if (points.textContent > 28 && points.textContent < 30) {
+    points.classList.replace("points-v4", "points-v5");
+  }
+  return;
 }
 
 // Control good/bad answer
@@ -169,13 +179,14 @@ squares.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (checkIfGood(event.target)) {
       question.classList.replace("question", "no-display");
-      reveal.classList.replace("hidden", "reveal")
+      reveal.classList.replace("hidden", "reveal");
       addPoints(3);
       click = true;
       next.classList.replace("no-display", "next");
+      // squares.classList.replace("square", "good");
     } else {
-      reveal.classList.replace("hidden", "reveal")
-      question.classList.replace("question", "no-display")
+      reveal.classList.replace("hidden", "reveal");
+      question.classList.replace("question", "no-display");
       click = true;
       next.classList.replace("no-display", "next");
     }
@@ -185,14 +196,14 @@ squares.forEach((button) => {
 duos.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (checkIfGood(event.target)) {
-      reveal.classList.replace("hidden", "reveal")
-      question.classList.replace("question", "no-display")
+      reveal.classList.replace("hidden", "reveal");
+      question.classList.replace("question", "no-display");
       addPoints(1);
       click = true;
       next.classList.replace("no-display", "next");
     } else {
-      reveal.classList.replace("hidden", "reveal")
-      question.classList.replace("question", "no-display")
+      reveal.classList.replace("hidden", "reveal");
+      question.classList.replace("question", "no-display");
       click = true;
       next.classList.replace("no-display", "next");
     }
@@ -200,13 +211,13 @@ duos.forEach((button) => {
 });
 
 // Next song & end  game
-let count = document.querySelector(".counter")
-let counter = 0;
+let count = document.querySelector(".counter");
+let counter = 1;
 next.addEventListener("click", () => {
   if (next.classList.contains("next") && counter <= 10) {
     click = false;
-    reveal.classList.replace("reveal", "hidden")
-    question.classList.replace("no-display","question")
+    reveal.classList.replace("reveal", "hidden");
+    question.classList.replace("no-display", "question");
     next.classList.replace("next", "no-display");
     squareChoices.id = "noSquareAnswers";
     squareButton.classList.replace("no-display", "square");
@@ -224,6 +235,10 @@ next.addEventListener("click", () => {
     choiceGame.id = "noGame";
     squareChoices.id = "noSquareAnswers";
     duoChoices.id = "noDuoAnswers";
+    congratz.classList.replace("no-display", "victory")
+    squareButton.classList.replace("square", "no-display");
+    duoButton.classList.replace("duo", "no-display");
     next.classList.replace("next", "no-display");
+    counter = 0;
   }
 });

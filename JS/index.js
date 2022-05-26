@@ -57,6 +57,8 @@ launchButton.addEventListener("click", () => {
     answersSection.classList.replace("no-answers", "answers");
     question.classList.replace("no-display", "question");
     reveal.classList.replace("reveal", "hidden")
+    counter = 1 ;
+    count.textContent = `${counter}/10`;
     reset();
     randomMusicSampled();
     randomSquareAnswer();

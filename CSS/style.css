@@ -495,8 +495,40 @@ li {
 }
 
 .good {
-  background-color: green;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #afefa7 0,
+    #02c44f 100%
+  );
+  border: 0;
+  border-radius: 0px;
+  box-shadow: rgba(5, 88, 2, 0.4) 0 2px 4px,
+    rgba(5, 88, 2, 0.3) 0 7px 13px -3px, rgba(5, 88, 2, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
 }
+
 .bad {
   background-color: red;
 }
@@ -530,4 +562,84 @@ li {
 
 .hidden {
   display: none;
+}
+
+.victory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to right top,
+      #4a057b,
+      #950072,
+      #ca005d,
+      #eb3241,
+      #f96f1d
+    )
+    1;
+  margin: 2rem;
+  margin-right: 14rem;
+  margin-left: 14rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  background-image: linear-gradient(
+    to right top,
+    #4a057b,
+    #950072,
+    #ca005d,
+    #eb3241,
+    #f96f1d
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: -4px -5px 10px #ca005d;
+}
+
+.victory h2 {
+text-align: center;
+color: white;
+font-weight: 900;
+margin-bottom: 1rem;
+}
+
+.victory hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 253, 253, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+  margin-bottom: 2rem;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.scoreboard h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.vinyl-score {
+  width: 6rem;
+  position: absolute;
+  margin: 0 auto;
+  /* margin-top: -2.5rem; */
+  animation: roll 3s linear infinite;
+  transform: rotate(30deg);
+  bottom: -3rem;
+  left: calc(50% - 3rem) ;
+  /* padding-bottom: 2rem; */
+}
+
+.pointsboard {
+
 }
