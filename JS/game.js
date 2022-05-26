@@ -7,7 +7,7 @@ let squareOne = document.querySelector(".square.one");
 let squareTwo = document.querySelector(".square.two");
 let squareThree = document.querySelector(".square.three");
 let squareFour = document.querySelector(".square.four");
-let squares = document.querySelectorAll(".square.a");
+let squares = document.querySelectorAll(".btn.square.a");
 
 // Duo's answers'ID
 let duoOne = document.querySelector(".duo.one");
@@ -31,8 +31,14 @@ let reveal = document.querySelector(".hidden");
 // Next's button class
 let next = document.querySelector(".no-display");
 
-// Congratz layout 
-let congratz = document.querySelector("section.no-display")
+// Congratz layout
+let congratz = document.querySelector("section.no-display");
+let final = document.querySelector(".pointsboard");
+
+// Sound
+let right = document.getElementById("vrai");
+let wrong = document.getElementById("wrong");
+console.log(right.volume);
 
 // Pick random musics
 function randomMusicSampled() {
@@ -85,6 +91,7 @@ function randomMusicSampled() {
 
 function reset() {
   musicsSampleOf.forEach((element) => (element.hasBeenPlayed = false));
+  musicsSampledIn.forEach((element) => (element.hasBeenPlayed = false));
 }
 
 // Pick random square answers
@@ -178,13 +185,16 @@ function checkIfGood(button) {
 squares.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (checkIfGood(event.target)) {
+      event.target.classList.add("good");
       question.classList.replace("question", "no-display");
       reveal.classList.replace("hidden", "reveal");
       addPoints(3);
       click = true;
+      right.play()
       next.classList.replace("no-display", "next");
-      // squares.classList.replace("square", "good");
     } else {
+      wrong.play()
+      event.target.classList.add("bad");
       reveal.classList.replace("hidden", "reveal");
       question.classList.replace("question", "no-display");
       click = true;
@@ -196,12 +206,16 @@ squares.forEach((button) => {
 duos.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (checkIfGood(event.target)) {
+      right.play()
+      event.target.classList.add("good");
       reveal.classList.replace("hidden", "reveal");
       question.classList.replace("question", "no-display");
       addPoints(1);
       click = true;
       next.classList.replace("no-display", "next");
     } else {
+      wrong.play()
+      event.target.classList.add("bad");
       reveal.classList.replace("hidden", "reveal");
       question.classList.replace("question", "no-display");
       click = true;
@@ -227,6 +241,8 @@ next.addEventListener("click", () => {
     duoChoices.id = "noDuoAnswers";
     counter++;
     count.textContent = `${counter}/10`;
+    squares.forEach((element) => element.classList.remove("good"));
+    squares.forEach((element) => element.classList.remove("bad"));
     randomMusicSampled();
     randomSquareAnswer();
     randomDuoAnswers();
@@ -235,8 +251,9 @@ next.addEventListener("click", () => {
     choiceGame.id = "noGame";
     squareChoices.id = "noSquareAnswers";
     duoChoices.id = "noDuoAnswers";
-    congratz.classList.replace("no-display", "victory")
+    congratz.classList.replace("no-display", "victory");
     squareButton.classList.replace("square", "no-display");
+    final.textContent = points.textContent;
     duoButton.classList.replace("duo", "no-display");
     next.classList.replace("next", "no-display");
     counter = 0;

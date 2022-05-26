@@ -222,7 +222,7 @@ li {
 }
 
 .btn:focus {
-  box-shadow: #950072 0 0 0 1.5px inset, rgba(74, 5, 123, 0.4) 0 2px 4px,
+  box-shadow: #950072 0 0 0 1px inset, rgba(74, 5, 123, 0.4) 0 2px 4px,
     rgba(74, 5, 123, 0.3) 0 7px 13px -3px, #950072 0 -3px 0 inset;
 }
 
@@ -526,11 +526,77 @@ li {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow, transform;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.good:focus {
+  box-shadow: rgb(5, 88, 2) 0 0 0 1px inset, rgb(5, 251, 67) 0 2px 4px,
+  #02c44f 0 7px 13px -3px, #afefa7 0 -3px 0 inset;
+}
+
+.good:hover {
+  box-shadow: rgba(2, 196,79, 0.4) 0 4px 8px,
+    rgba(2, 196,79, 0.3) 0 7px 13px -3px, #02c44f 0 -3px 0 inset;
+  transform: translateY(-2px);
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #02c44f 0,
+    #afefa7 100%
+  );
 }
 
 .bad {
-  background-color: red;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #e61d1d 0,
+    black 100%
+  );
+  border: 0;
+  border-radius: 0px;
+  box-shadow: rgba(77, 2, 2, 0.4) 0 2px 4px,
+    rgba(77, 2, 2, 0.3) 0 7px 13px -3px, rgba(137, 7, 7, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.bad:focus {
+  box-shadow: rgb(0, 0, 0) 0 0 0 1px inset, rgb(170, 7, 7,) 0 2px 4px,
+  #c40202 0 7px 13px -3px, #ea7d7d 0 -3px 0 inset;
+}
+
+.bad:hover {
+  box-shadow: rgba(230, 7,7, 0.4) 0 4px 8px,
+  rgba(250, 7, 7, 0.3) 0 7px 13px -3px, #c40202 0 -3px 0 inset;
+transform: translateY(-2px);
+background-image: radial-gradient(
+  100% 100% at 100% 0,
+  black 0,
+  #e61d1d 100%
+);
 }
 
 .no-answers {
@@ -625,7 +691,8 @@ margin-bottom: 1rem;
 .scoreboard h3 {
   color: white;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  /* margin-left: 1rem; */
 }
 
 .vinyl-score {
@@ -641,5 +708,10 @@ margin-bottom: 1rem;
 }
 
 .pointsboard {
+margin-left: 2rem;
+margin-right: 1rem;
+font-size: 3rem;
+text-shadow: 1px 1px black;
+margin-top: -1.5rem;
 
 }

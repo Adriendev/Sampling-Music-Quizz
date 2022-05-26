@@ -48,7 +48,7 @@ const timerDiv = document.querySelector(".no-time");
 // Launching & restart the game
 launchButton.addEventListener("click", () => {
   if (launchButton.classList.contains("start")) {
-    launchButton.textContent = "Restart?";
+    launchButton.textContent = "Try Again?";
     launchButton.classList.replace("start", "restart");
     header.id = "no-intro";
     vinyl.classList.replace("vinyl", "no-display");
