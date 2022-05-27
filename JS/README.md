@@ -24,8 +24,9 @@ This is my first project, after two weeks at the Ironhack bootcamp in Paris. In 
 ### Issues
 
 - Not responsive with mobile
-- Need to add two difficulty levels
-- Timer
+- Difficulty levels
+- Timer 
+- Make the iframe react and start at each click
 
 -----
 
